@@ -32,7 +32,7 @@ contract WillContract {
     }
 
     function Claim() external onlyRecipient {
-        require(block.timestamp > Lastping + 5 seconds);
+        require(block.timestamp > Lastping + 12 months);
         payable(recepient).transfer(address(this).balance);
     }
 
